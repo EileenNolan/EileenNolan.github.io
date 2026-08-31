@@ -1,0 +1,161 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #000;
+}
+header {
+    background-color: #004d40;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    padding-left: 10%;
+}
+header h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+header h1 .duck {
+    width: 38px;
+    height: auto;
+    flex-shrink: 0;
+}
+nav {
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+nav a {
+    color: #b2dfdb;
+    text-decoration: none;
+    margin-right: 14px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav a.current {
+    color: #fff;
+    font-weight: bold;
+}
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+.about-me {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.about-me-text {
+    flex: 1;
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+.content {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+.content h2 {
+    color: #004d40;
+    margin-bottom: 10px;
+}
+.links {
+    margin-top: 14px;
+    font-size: 0.95em;
+}
+.links a {
+    color: #004d40;
+}
+.entry-date {
+    color: #555;
+    font-size: 0.9em;
+}
+.photo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* two photos side by side, stacking on narrow screens */
+.photo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
+}
+.photo-row img {
+    flex: 1 1 260px;
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* small duck used as a separator in the links line */
+.duck-sep {
+    width: 15px;
+    height: auto;
+    vertical-align: -2px;
+    margin: 0 4px;
+    opacity: 0.75;
+}
+footer {
+    background-color: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+.highlight {
+    color: #e8a33d;
+}
+
+/* duck bullets — used on the research interests list */
+ul.ducks {
+    list-style: none;
+    padding-left: 0;
+}
+ul.ducks li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 6px;
+}
+ul.ducks li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.28em;
+    width: 20px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("duck.svg");
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+    header {
+        padding-left: 5%;
+    }
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+}
